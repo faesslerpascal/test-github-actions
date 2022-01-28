@@ -18,8 +18,7 @@ jobs:
           df -h
       - name: cat README.md into env var
         id: readme
-        run: | 
-          echo ::set-output name=readme::$(cat README.md)
+        run: echo ::set-output name=readme::$(`cat README.md`)
         
       - name: show step readme
         run: echo ${{ steps.vars.outputs.readme }}
