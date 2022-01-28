@@ -38,8 +38,13 @@ jobs:
         run: echo "${{ steps.convert.outputs.html }}"
         
       - name: write html
-              run: echo "${{ steps.convert.outputs.html }}" > readme.html
-        
+uses: DamianReeves/write-file-action
+with:
+  path: ${{ env.home}}/changelog.html
+  contents: |
+    echo "Hello World!"
+  write-mode: overwrite 
+  
       - name: show content after action
         run: |
           ls -l
