@@ -21,11 +21,13 @@ jobs:
         run: | 
           echo ::set-output name=readme::$(cat README.md)
         
-          
+      - name: show step readme
+        run: echo ${{ steps.vars.outputs.readme }}
+      
       - name: convert README
         uses: lifepal/markdown-to-html@v1.1
         with: 
-          input: ${{ steps.vars.outputs.readme }}
+          text: ${{ steps.vars.outputs.readme }}
           
         
       
