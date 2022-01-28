@@ -19,12 +19,13 @@ jobs:
       - name: cat README.md into env var
         id: readme
         run: | 
-          cat README.md
+          echo ::set-output name=readme::$(cat README.md)
+        
           
       - name: convert README
         uses: lifepal/markdown-to-html@v1.1
         with: 
-          input: ${{ steps.readme.outputs }}
+          input: ${{ steps.vars.outputs.readme }}
           
         
       
