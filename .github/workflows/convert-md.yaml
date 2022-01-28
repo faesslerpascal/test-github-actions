@@ -37,6 +37,9 @@ jobs:
       - name: show html
         run: echo "${{ steps.convert.outputs.html }}"
         
+      - name: write html
+              run: echo "${{ steps.convert.outputs.html }}" > readme.html
+        
       - name: show content after action
         run: |
           ls -l
