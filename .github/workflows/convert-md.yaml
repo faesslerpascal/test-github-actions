@@ -5,12 +5,12 @@ on:
 
 jobs:
   convert-md:
-    runs-on: [ "ubuntu-latest" ]
+    runs-on: "ubuntu-latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: show checked out content and disk free
-      run: |
-        ls -l
-        df -h
+        run: |
+          ls -l
+          df -h
