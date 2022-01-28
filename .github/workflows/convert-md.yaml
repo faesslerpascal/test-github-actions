@@ -17,5 +17,13 @@ jobs:
           ls -l
           df -h
       - name: cat README.md into env var
-        run: cat README.md 
+        id: text
+        run: | 
+          cat README.md
+          
+      - name: convert README
+        uses: lifepal/markdown-to-html@v1.1
+        
+        
+      
 
