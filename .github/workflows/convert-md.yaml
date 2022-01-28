@@ -1,7 +1,9 @@
 name: convert md
 on:
   push:
-    branches: [ main ]
+    # branches: [ main ]
+  pull_request:
+
 
 jobs:
   convert-md:
@@ -14,3 +16,4 @@ jobs:
         run: |
           ls -l
           df -h
+
