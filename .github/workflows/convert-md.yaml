@@ -40,7 +40,7 @@ jobs:
       - name: write html
         uses: DamianReeves/write-file-action
         with:
-          path: /changelog.html
+          path: '/output.html'
           contents: |
             echo "Hello World!"
             write-mode: overwrite 
