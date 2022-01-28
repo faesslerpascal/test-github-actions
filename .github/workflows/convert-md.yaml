@@ -1,7 +1,7 @@
 name: convert md
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   convert-md:
