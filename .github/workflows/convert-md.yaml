@@ -16,11 +16,10 @@ jobs:
         run: |
           ls -l
           df -h
+          
       - name: cat README.md into env var
         id: readme
-        run: | 
-          RM=$(cat README.md)
-          echo "README=$RM" >> $GITHUB_ENV
+        run: echo "README=$(cat README.md)" >> $GITHUB_ENV
         
       - name: show step readme
         run: echo ${{ env.README }}
