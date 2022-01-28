@@ -4,13 +4,13 @@ jobs:
   convert-md:
     build:
       runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v2
-            with:
-                fetch-depth: 0
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
 
-          - name: show checked out content and disk free
-            run: |
-              ls -l
-              df -h
+        - name: show checked out content and disk free
+          run: |
+            ls -l
+            df -h
