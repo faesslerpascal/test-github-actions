@@ -22,7 +22,7 @@ jobs:
       #   run: echo "README=$(cat README.md)" >> $GITHUB_ENV
             
       - name: show env
-        run: echo ${{ env }}
+        run: echo ${{ esnv }}
       
       - name: convert README
         uses: lifepal/markdown-to-html@v1.1
