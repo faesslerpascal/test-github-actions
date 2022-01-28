@@ -37,6 +37,10 @@ jobs:
       - name: show html
         run: echo "${{ steps.convert.outputs.html }}"
         
+      - name: show content after action
+        run: |
+          ls -l
+        
         
       
 
