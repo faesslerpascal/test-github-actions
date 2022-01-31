@@ -42,8 +42,8 @@ jobs:
         with:
           path: "README.html"
           contents: |
-            echo "${{ steps.convert.outputs.html }}"
-            write-mode: overwrite 
+            echo "Hello World!"
+          write-mode: overwrite 
             
       - name: "Read HTML"
         id: readmehtml
