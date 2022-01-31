@@ -44,6 +44,16 @@ jobs:
           contents: |
             echo "${{ steps.convert.outputs.html }}"
             write-mode: overwrite 
+            
+      - name: "Read HTML"
+        id: readmehtml
+        uses: andstor/file-reader-action@v1
+        with:
+          path: "README.md"            
+          
+      - name: show htmlout
+        run: echo "${{ steps.readmehtml.outputs.contents }}"
+          
   
       - name: show content after action
         run: |
