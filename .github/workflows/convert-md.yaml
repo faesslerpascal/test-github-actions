@@ -42,7 +42,7 @@ jobs:
         with:
           path: "README.html"
           contents: |
-            echo "Hello World!"
+            "Hello World!"
           write-mode: overwrite 
             
       - name: "Read HTML"
