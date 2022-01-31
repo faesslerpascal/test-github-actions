@@ -49,7 +49,7 @@ jobs:
         id: readmehtml
         uses: andstor/file-reader-action@v1
         with:
-          path: "README.md"            
+          path: "README.html"            
           
       - name: show htmlout
         run: echo "${{ steps.readmehtml.outputs.contents }}"
