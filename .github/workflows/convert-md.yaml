@@ -53,8 +53,7 @@ jobs:
           
       - name: show htmlout
         run: echo "${{ steps.readmehtml.outputs.contents }}"
-          
-  
+            
       - name: show content after action
         run: |
           ls -l
